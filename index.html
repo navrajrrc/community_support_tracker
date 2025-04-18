@@ -10,32 +10,42 @@
         <header>
             <h1>Donation Tracker</h1>
         </header>
-
-
         <section>
-            <button class="hamburger" aria-label="Menu">&#9776;</button>
-
-            <nav class="nav-menu" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav><br>
+            <nav class="site-nav">
+                <button class="hamburger" aria-label="Toggle-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+        </nav>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="donations">Donations</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
         </section>
         <section>
-            <form action="/submitdonation" method="POST">
+            <form id=" donation-form">
                 <label for="charityname">Charity Name:</label>
-                <input type="text" id="charityname" name="charityname" required><br><br>
+                <input type="text" id="charityname" name="charityname" >
+                <span id ="charityname-error" class="error-message"></span>
+                <br><br>
  
-                <label for="donationamount">Donation Amount(in dollars):</label>
-                <input type="number" id="number" required><br><br>
+                <label for="donationamount">Donation Amount:</label>
+                <input type="number" id="number" >
+                <span id ="donationamount-error" class="error-message"></span>
+                <br><br>
  
                 <label for="donationdate">Date of Donation:</label>
-                <input type="datetime-local" id ="donationdate" name="donationdate"><br><br>
+                <input type="datetime-local" id ="donationdate" name="donationdate">
+                <span id ="donationdate-error" class="error-message"></span>
+                <br><br>
  
                 <label for="donorcomment">Donor Comment/Message:</label><br>
-                <textarea id="donorcomment" name="donorcomment" rows="6" cols="50"></textarea><br><br>
+                <textarea id="donorcomment" name="donorcomment" rows="8" cols="55"></textarea>
+                <span id ="donorcomment-error" class="error-message"></span>
+                <br><br>
  
                 <input type="submit" value="Submit">
                
@@ -44,7 +54,7 @@
         <footer>
             <p>To get more information, call us at 123-456-7890</p>
         </footer>
-
+        <script src="script.js"></script>
 
 
 
