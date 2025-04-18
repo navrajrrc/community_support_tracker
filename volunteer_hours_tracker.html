@@ -3,46 +3,49 @@
 <head> 
     <meta charset= "UTF-8">
     <title> VOLUNTEER HOURS TRACKER</title>
-    <link rel="stylesheet" >
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
-    <header>PiXELL River Financial </header>
-    <p> Overview of company's volunteer efforts</p>
-    
-    <nav>
+    <header>
+        <h1>PiXELL River Financial </h1>
+    </header>
+    <h3> Overview of company's volunteer efforts</h3>
+    <button class="hamburger" aria-label="toggle menu">&#9776; </button>
+    <nav class="nav">
         <a href="Home"> Home</a>
         <a href="volunteer_hours_tracker.html">Volunteer Hours</a>
         <a href="Contact us"> Contact us</a>
     </nav>
     <main>
-        <header2>
-            Your Volunteer Hours 
-        </header2>
-        <form action ="#" method="post">
-
-            <label for =" Charity Name">Charity Name:</label><br>
-            <input type="text" id="organization" name="Charityname" required><br><br>
-
-            <label for="Hours Volunteered"> Hours Volunteered:</label><br>
-            <input type="text" id="Hours Volunteered" name="Hours Volunteered" required><br><br>
-
-            <label for ="Date"> Date:</label><br>
-            <input type="date" id="Date" name="Date" required><br><br>
-
-            <label for="experience">Share Your Experience(1-5 stars):</label><br>
-            <div class="stars">
-                <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-                <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-                <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-                <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-                <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+        <form id="volunteerform">
+            <div>
+                <label for =" charityname">Charity Name:</label><br>
+                <input type="text" id="charityname" name="charityname">
+                <span id="charityerror" class="error"></span><br><br>
+            </div>
+            <div>
+                <label for="hoursvolunteered"> Hours Volunteered:</label><br>
+                <input type="text" id="hoursvolunteered" name="hoursvolunteered">
+                <span id="hourserror" class="error"></span><br><br>
+            </div>
+            <div>
+                <label for ="date"> Date:</label><br>
+                <input type="date" id="date" name="date">
+                <span id="dateerror" class="error"></span><br><br>
+            </div>
+            <div>
+                <label for="experience">Share Your Experience(1-5 stars):</label><br>
+                <input type="number" id="experience" name="experience" min="1" max="5">
+                <span id="ratingerror" class="error"></span><br>
             </div>
             <br>
             <button type ="submit">Submit</button>
+        </form>
     </main>
 
 <footer>
     <p>River Financial Hour tracker 2025</p>
 </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+/* This is for resetting the whole form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* For styling the main header h1 */
+h1 {
+    background-color: #64c9ff;
+    color:rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+/* This is for styling the h3 */
+h3 {
+    background-color: white;
+    text-align: center;
+    margin-top: 2%;
+    color:#64c9ff
+}
+
+/* This is for styling the nvabar */
+nav {
+    background-color: #64c9ff;
+    padding: 10px;
+    margin:20px 0;
+    text-align: center;
+    border-radius: 0px;
+}
+
+/* This is for styling the text in the navbar */
+nav a {
+    margin: 2px;
+    color: white;
+    font-weight: bold;
+    text-decoration: None;
+}
+
+/*  This is to get the | between the content in the navbar */
+nav a::after {
+    content:"|";
+    margin-left: 10px;
+    color: white;
+    text-decoration: None;
+}
+
+/*  This is for the hamburger menu option */
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* This is to edit the main content of the HTML */
+main {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* This is for styling the submit button */
+button {
+    padding: 10px 20px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*  This is for getting the footer styled */
+footer {
+    margin-top:40px;
+    text-align: center;
+    padding: 15px;
+    background-color: 15px;
+}
+
+/*  This is used to convert the navbar into the hamburger menu */
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+      }
+    
+      .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;  
+        left: 0;
+        width: 100%;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+    }
