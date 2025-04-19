@@ -10,7 +10,7 @@ body {
  
  
 header {
-    background-color: rgb(26, 169, 190);
+    background-color: rgb(28, 139, 170);
     padding: 20px;
     text-align: center;
 }
@@ -21,7 +21,7 @@ h1 {
  
 .site-nav {
     position: relative;
-    background: #000;
+    background: #740303;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: flex-start;
@@ -80,16 +80,22 @@ h1 {
 /* Form Styles */
 form {
     background-color: white;
-    padding: 30px;
+    padding: 40px 35px; 
     border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(34, 17, 17, 0.1);
-    max-width: 500px;
-    margin: 20px auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
  
 form label {
     display: block;
     margin-bottom: 10px;
+    color: #333;
 }
  
 form input[type="text"],
@@ -97,23 +103,25 @@ form input[type="number"],
 form input[type="datetime-local"],
 form textarea {
     width: 100%;
-    padding: 6px;
-    margin-bottom: 15px;
-    border: 1px solid #0a0a0a;
-    border-radius: 4px;
+    padding: 9px;
+    margin-bottom: 10px;
+    border: 2px solid #0a0a0a;
+    border-radius: 8px;
 }
  
 form input[type="submit"] {
-    background-color: #083239; /* Button color */
-    border-radius: 12px;
+    background-color: #05431a; /* Button color */
+    border-radius: 20px;
     color: white;
     padding: 10px 15px;
     cursor: pointer;
     margin: 22px 14px;
+    font-size: medium;
+    font-weight: bold;
 }
  
 form input[type="submit"]:hover {
-    background-color: rgb(17, 1, 1); /* Hover color for button */
+    background-color: rgb(57, 56, 56); /* Hover color for button */
 }
  
 /* Footer Styles */
