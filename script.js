@@ -13,7 +13,7 @@ const ratingerror = document.getElementById("ratingerror");
 // This is event listener when form is submitted
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+// this checks if the form is properly filled
     let isvalid = true;
 
 // checks if the charity name is empty
