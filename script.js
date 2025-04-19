@@ -1,5 +1,5 @@
 const charityname = document.getElementById('charityname');
-const donationamount = document.getElementById('number');
+const donationamount = document.getElementById('donationamount');
 const donationdate = document.getElementById('donationdate');
 const donorcomment = document.getElementById('donorcomment');
 const donationform = document.getElementById('donation-form');
@@ -37,6 +37,17 @@ donationform.addEventListener('submit', (e) =>
        
         donorcommenterror.innerHTML = "please enter a comment";
     }
+
+    const formdata = {
+        charityname: charityname.value,
+        donationamount: donationamount.value,
+        donationdate: donationdate.value,
+        donorcomment: donorcomment.value
+   
+    };
+   
+   
+    localStorage.setItem('datasubmission', JSON.stringify(formdata))
  
 });
 
