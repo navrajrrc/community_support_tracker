@@ -3,6 +3,8 @@ const donationamount = document.getElementById('donationamount');
 const donationdate = document.getElementById('donationdate');
 const donorcomment = document.getElementById('donorcomment');
 const donationform = document.getElementById('donation-form');
+const totalmoney = document.getElementById('money');
+let money = 0;
  
 const charitynameerror = document.getElementById('charityname-error');
 const donationamounterror = document.getElementById('donationamount-error');
@@ -45,9 +47,14 @@ donationform.addEventListener('submit', (e) =>
         donorcomment: donorcomment.value
    
     };
+     
+  
+    money += Number(formdata.donationamount);
+    totalmoney.innerHTML = money;
+ 
    
    
-    localStorage.setItem('datasubmission', JSON.stringify(formdata))
+    localStorage.setItem('datasubmission', JSON.stringify(formdata));
     submitinfo(formdata);
     saveToLocalStorage(formdata);
  
