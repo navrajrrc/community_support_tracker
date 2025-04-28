@@ -48,6 +48,8 @@ donationform.addEventListener('submit', (e) =>
    
    
     localStorage.setItem('datasubmission', JSON.stringify(formdata))
+    submitinfo(formdata);
+    saveToLocalStorage(formdata);
  
 });
 
@@ -57,4 +59,25 @@ const topnav = document.querySelector('.topnav');
 hamburger.addEventListener('click', function() {
     topnav.classList.toggle('show');
 });
+
+function submitinfo() {
+    const charityname = document.getElementById('charityname').value;
+    const donationamount = document.getElementById('donationamount').value;
+    const donationdate = document.getElementById('donationdate').value;
+    const donorcomment = document.getElementById('donorcomment').value;
  
+    // get table and insert rows
+    const table = document.getElementById("donation");
+    const addrow = table.insertRow(table.rows.length);
+ 
+    // insert
+    addrow.insertCell(0).innerHTML = charityname;
+    addrow.insertCell(1).innerHTML = donationamount;
+    addrow.insertCell(2).innerHTML = donationdate;
+    addrow.insertCell(3).innerHTML = donorcomment;
+    addrow.insertCell(4).innerHTML = '<button onclick="deleteData(this)">Delete</button>';
+}
+function deleteData(button)  {
+    const row = button.parentNode.parentNode;// this will get the parent row of the button
+    row.parentNode.removeChild(row);
+}
